@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Draining-Water-Down-Sink-CloseDistance-1-www.FesliyanStudios.com (online-audio-converter.com).wav-30329f5ff0bacba95f419d35a07758dd.sample"
+
+[deps]
+
+source_file="res://SoundFX/Draining-Water-Down-Sink-CloseDistance-1-www.FesliyanStudios.com (online-audio-converter.com).wav"
+dest_files=[ "res://.import/Draining-Water-Down-Sink-CloseDistance-1-www.FesliyanStudios.com (online-audio-converter.com).wav-30329f5ff0bacba95f419d35a07758dd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

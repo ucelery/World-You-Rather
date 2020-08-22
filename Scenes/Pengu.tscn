@@ -1,0 +1,220 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Sprites/Pingu/PinguBlink.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Pingu/PinguLeft.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Pingu/PinguRight.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Pingu/PinguBody.png" type="Texture" id=4]
+[ext_resource path="res://Pengu.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "ExtremeFlapping"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PinguLeft:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 2, 0.5, 2 ),
+"update": 0,
+"values": [ 0.0, -100.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PinguRight:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 2, 0.5, 2 ),
+"update": 0,
+"values": [ 0.0, 90.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 2, 0.5, 2 ),
+"update": 0,
+"values": [ 10.0, -10.0, 10.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "FastFlapping"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PinguLeft:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -100.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PinguRight:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 10.0, -10.0, 10.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Flap"
+length = 3.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PinguLeft:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.8, 1.1, 1.4, 1.7, 2, 2.3, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -100.0, 0.0, -100.0, 0.0, -100.0, 0.0, 0.0, -100.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PinguRight:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.8, 1.1, 1.4, 1.7, 2, 2.3, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 0.0, 90.0, 0.0, 90.0, 0.0, 0.0, 90.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1.1, 1.7, 2.3, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 10.0, -10.0, 10.0, -10.0, 10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Flapping"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PinguLeft:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -100.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PinguRight:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 10.0, -10.0, 10.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Swaying"
+length = 3.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.1, 1.7, 2.3, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 10.0, -10.0, 10.0, -10.0, 10.0, -10.0 ]
+}
+
+[node name="Pengu" type="Node2D"]
+rotation = 0.0389749
+script = ExtResource( 5 )
+
+[node name="PinguRight" type="Sprite" parent="."]
+position = Vector2( -46.3128, -178.92 )
+rotation = 0.610011
+texture = ExtResource( 3 )
+offset = Vector2( 62.3685, 9.01517 )
+
+[node name="PinguBody" type="Sprite" parent="."]
+position = Vector2( 9.69879, -152.953 )
+texture = ExtResource( 4 )
+
+[node name="PinguLeft" type="Sprite" parent="."]
+position = Vector2( 52.7505, -164.818 )
+rotation = -0.67779
+texture = ExtResource( 2 )
+offset = Vector2( -43.3517, 12.58 )
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/ExtremeFlapping = SubResource( 1 )
+anims/FastFlapping = SubResource( 2 )
+anims/Flap = SubResource( 3 )
+anims/Flapping = SubResource( 4 )
+anims/Swaying = SubResource( 5 )
+
+[node name="PinguBlink" type="Sprite" parent="."]
+visible = false
+position = Vector2( 10.7195, -154.287 )
+texture = ExtResource( 1 )

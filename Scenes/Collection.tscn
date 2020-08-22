@@ -1,0 +1,299 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Sprites/Cards/Situations/18Situation.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Cards/Situations/20Situation.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Cards/Situations/6Situation.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Cards/Situations/11Situation.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Cards/Situations/2Situation.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Cards/Situations/8Situation.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Cards/Situations/14Situation.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Cards/Situations/16Situation.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Cards/Situations/15Situation.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Cards/Situations/17Situation.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Cards/Situations/4Situation.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Cards/Situations/3Situation.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Cards/Situations/1Situation.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Cards/Situations/10Situation.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Cards/Situations/7Situation.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Cards/Situations/13Situation.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Cards/Situations/19Situation.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Cards/Situations/12Situation.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Cards/Situations/5Situation.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Cards/Situations/9Situation.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Collection.gd" type="Script" id=21]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 253.851, 401.83 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Card1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Card1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1 ),
+"transitions": PoolRealArray( 2, 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -800 ), Vector2( 0, -750 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Card2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Card2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1 ),
+"transitions": PoolRealArray( 2, 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -800 ), Vector2( 0, -750 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Card3"
+
+[node name="Collection" type="Node2D"]
+script = ExtResource( 21 )
+
+[node name="Cards" type="Node2D" parent="."]
+position = Vector2( 91.9514, 625.301 )
+scale = Vector2( 0.3, 0.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Card1" type="Sprite" parent="Cards"]
+position = Vector2( 0, -750 )
+texture = ExtResource( 13 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D" type="Area2D" parent="Cards/Card1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card1/Area2D"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card2" type="Sprite" parent="Cards"]
+position = Vector2( 0, -750 )
+texture = ExtResource( 5 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D2" type="Area2D" parent="Cards/Card2"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card2/Area2D2"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card3" type="Sprite" parent="Cards"]
+texture = ExtResource( 12 )
+offset = Vector2( -2.08203, -515.738 )
+
+[node name="Area2D3" type="Area2D" parent="Cards/Card3"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card3/Area2D3"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card4" type="Sprite" parent="Cards"]
+texture = ExtResource( 11 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D4" type="Area2D" parent="Cards/Card4"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card4/Area2D4"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card5" type="Sprite" parent="Cards"]
+texture = ExtResource( 19 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D5" type="Area2D" parent="Cards/Card5"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card5/Area2D5"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card6" type="Sprite" parent="Cards"]
+texture = ExtResource( 3 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D6" type="Area2D" parent="Cards/Card6"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card6/Area2D6"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card7" type="Sprite" parent="Cards"]
+texture = ExtResource( 15 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D7" type="Area2D" parent="Cards/Card7"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card7/Area2D7"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card8" type="Sprite" parent="Cards"]
+texture = ExtResource( 6 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D8" type="Area2D" parent="Cards/Card8"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card8/Area2D8"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card9" type="Sprite" parent="Cards"]
+texture = ExtResource( 20 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D9" type="Area2D" parent="Cards/Card9"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card9/Area2D9"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card10" type="Sprite" parent="Cards"]
+texture = ExtResource( 14 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D10" type="Area2D" parent="Cards/Card10"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card10/Area2D10"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card11" type="Sprite" parent="Cards"]
+texture = ExtResource( 4 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D11" type="Area2D" parent="Cards/Card11"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card11/Area2D11"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card12" type="Sprite" parent="Cards"]
+texture = ExtResource( 18 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D12" type="Area2D" parent="Cards/Card12"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card12/Area2D12"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card13" type="Sprite" parent="Cards"]
+texture = ExtResource( 16 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D13" type="Area2D" parent="Cards/Card13"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card13/Area2D13"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card14" type="Sprite" parent="Cards"]
+texture = ExtResource( 7 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D14" type="Area2D" parent="Cards/Card14"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card14/Area2D14"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card15" type="Sprite" parent="Cards"]
+texture = ExtResource( 9 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D15" type="Area2D" parent="Cards/Card15"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card15/Area2D15"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card16" type="Sprite" parent="Cards"]
+texture = ExtResource( 8 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D16" type="Area2D" parent="Cards/Card16"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card16/Area2D16"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card17" type="Sprite" parent="Cards"]
+texture = ExtResource( 10 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D17" type="Area2D" parent="Cards/Card17"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card17/Area2D17"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card18" type="Sprite" parent="Cards"]
+texture = ExtResource( 1 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D18" type="Area2D" parent="Cards/Card18"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card18/Area2D18"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card19" type="Sprite" parent="Cards"]
+texture = ExtResource( 17 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D19" type="Area2D" parent="Cards/Card19"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card19/Area2D19"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Card20" type="Sprite" parent="Cards"]
+texture = ExtResource( 2 )
+offset = Vector2( -2.08203, -512.765 )
+
+[node name="Area2D20" type="Area2D" parent="Cards/Card20"]
+scale = Vector2( 0.999999, 0.999999 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card20/Area2D20"]
+position = Vector2( -0.561829, -517.063 )
+shape = SubResource( 1 )
+
+[node name="Peak" type="AnimationPlayer" parent="Cards"]
+anims/Card1 = SubResource( 2 )
+anims/Card2 = SubResource( 3 )
+anims/Card3 = SubResource( 4 )
+
+[node name="Animations" type="Node2D" parent="."]
+[connection signal="mouse_entered" from="Cards/Card1/Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_entered" from="Cards/Card2/Area2D2" to="." method="_on_Area2D2_mouse_entered"]
